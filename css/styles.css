@@ -299,8 +299,28 @@ body {
   flex-wrap: wrap;
 }
 
+.do-item {
+  position: relative;
+}
+
 .do-img {
   display: block;
+}
+
+.do-text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 27px 0;
+  margin: 0;
+
+  color: #fff;
+  line-height: 1.15;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* Team section */
@@ -581,6 +601,7 @@ body {
 }
 
 .portfolio-item:hover .overlay {
+  opacity: 1;
   transform: translatey(0);
 }
 
@@ -608,6 +629,7 @@ body {
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
 
+  opacity: 0;
   transform: translatey(100%);
   transition: transform 250ms ease;
 }
