@@ -28,28 +28,16 @@
                 <ul class="header-nav list">
 
                     <li class="header-nav-item">
-                        <a href="./index.html" class="nav-link  link current">Студия
-                            <svg class="line-ico">
-                                <use href="./images/symbol-defs.svg#icon-line-hover"></use>
-                            </svg>
-                        </a>
+                        <a href="./index.html" class=" link current">Студия</a>
                     </li>
 
                     <li class="header-nav-item">
 
-                        <a href="./portfolio.html" class="nav-link link">Портфолио
-                            <svg class="line-ico">
-                                <use href="./images/symbol-defs.svg#icon-line-hover"></use>
-                            </svg>
-                        </a>
+                        <a href="./portfolio.html" class="link">Портфолио</a>
                     </li>
 
                     <li class="header-nav-item">
-                        <a href="#" class="nav-link link">Контакты
-                            <svg class="line-ico">
-                                <use href="./images/symbol-defs.svg#icon-line-hover"></use>
-                            </svg>
-                        </a>
+                        <a href="#" class="link">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -91,7 +79,7 @@
 
             <div class="container">
                 <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-                <button class="btn btn-primary" type="button">Заказать услугу</button>
+                <button data-modal-open class="btn btn-primary" type="button">Заказать услугу</button>
             </div>     
                     
         </section>
@@ -467,15 +455,17 @@
         
     </footer>
 
-    <section class="modal-window">
-        <div class="form-block">
-            <div class="close">
+    <!-- Hero Modal Window -->
+    <div data-modal-close data-modal class="backdrop is-hidden">
+        <div class="modal">
+            <div data-modal-close class="close">
                 <svg class="close-ico">
                     <use href="./images/symbol-defs.svg#icon-close"></use>
                 </svg>
             </div>
         </div>
-    </section>
+    </div>
 
+    <script src="./js/modal.js"></script>
 </body>
 </html>
