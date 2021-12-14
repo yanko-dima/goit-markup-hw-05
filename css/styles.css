@@ -136,6 +136,29 @@ body {
   color: var(--mainBlack);
 }
 
+.nav-link {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.nav-link:hover .line-ico {
+  color: var(--mainBlue);
+  transform: translatex(0);
+}
+
+.line-ico {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 48px;
+  left: 0;
+  bottom: 0;
+  fill: var(--mainBlue);
+
+  transform: translatex(-100%);
+}
+
 .header-nav .current {
   color: var(--mainBlue);
 }
@@ -463,7 +486,7 @@ body {
 /* Modal window section */
 .modal-window {
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -483,13 +506,23 @@ body {
 
 .close {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
   right: 6px;
   top: 6px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 
 .close-ico {
   width: 18px;
   height: 18px;
+  fill: #000000;
 }
 
 /* Main section portfolio */
@@ -536,8 +569,6 @@ body {
   flex-basis: calc(100% / 3 - 30px);
   border: 1px solid var(--mainBorder);
   box-sizing: border-box;
-
-  overflow: hidden;
 }
 
 .portfolio-item:not(:nth-last-child(-n + 3)) {
@@ -549,13 +580,15 @@ body {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.portfolio-item:hover .overlay {
+  transform: translatey(0);
+}
+
 .overlay-box {
   display: block;
   position: relative;
-}
 
-.overlay-box:hover .overlay {
-  transform: translatex(0);
+  overflow: hidden;
 }
 
 .portfilio-img {
@@ -565,17 +598,17 @@ body {
 .overlay {
   display: flex;
   align-items: center;
+
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 294px;
+  height: 100%;
 
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translatex(-100%);
+  transform: translatey(100%);
   transition: transform 250ms ease;
 }
 
